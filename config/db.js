@@ -1,11 +1,9 @@
-const mongoose = require('mongoose');
-const config = require('config');
-const db = config.get('mongoURI');
+import { set, connect } from 'mongoose';
 
 const connectDB = async () => {
   try {
-    mongoose.set('strictQuery', true);
-    await mongoose.connect(db, {
+    set('strictQuery', true);
+    await connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
     });
 
@@ -16,4 +14,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+export default connectDB;

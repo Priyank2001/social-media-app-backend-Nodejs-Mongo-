@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "basic app for fun",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node app.js",
+    "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +14,7 @@
   "dependencies": {
     "body-parser": "^1.20.1",
     "config": "^3.3.8",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.8.3"
   },
